@@ -1,0 +1,21 @@
+*{
+  // overflow-y: hidden;
+  padding: 0%;
+  margin: 0%;
+  
+}
+*::-webkit-scrollbar{
+  display: none;
+}
+
+.App{
+  min-height: 100vh; 
+  // background-color: black;
+}
+
+#headermain{
+
+
+position: sticky;
+top: 0px;
+}

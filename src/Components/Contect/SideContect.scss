@@ -1,0 +1,11 @@
+#SideContect{
+    list-style: none;
+padding: 1rem;
+// border: 1px solid coral;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    box-shadow: 10px 10px 10px  rgba(0,0,0,0.25);
+    position: fixed;
+    right: 0px;
+}
