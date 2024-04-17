@@ -6,10 +6,10 @@ const SideContact = () => {
     return (
         <>
             <ul id='SideContect'>
-                <li><FontAwesomeIcon icon={faPhone} beat size='2xl' /></li>
-                <li><FontAwesomeIcon icon={faEnvelope} beat size='2xl' /></li>
-                <li><FontAwesomeIcon icon={faInstagram} beat size='2xl' /></li>
-                <li><FontAwesomeIcon icon={faLinkedin} beat size='2xl' /></li>
+                <li><FontAwesomeIcon icon={faPhone} beat size='1xl' /></li>
+                <li><FontAwesomeIcon icon={faEnvelope} beat size='1xl' /></li>
+                <li><FontAwesomeIcon icon={faInstagram} beat size='1xl' /></li>
+                <li><FontAwesomeIcon icon={faLinkedin} beat size='1xl' /></li>
             </ul>
         </>
     );

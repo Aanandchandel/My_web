@@ -1,29 +1,61 @@
+import { useState } from "react";
 import "./Header.scss";
+import "./HeaderM.scss";
+import Logo from "../Logo/Logi";
+import MediaQuery from "react-responsive";
 import barr from "./bars-solid.svg";
-import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 const Header = () => {
-  const [hide, setHide] = useState(true);
-  console.log(window.innerWidth); 
+  const [show, setShow] = useState(false);
 
-  useEffect(() => {
-    window.innerWidth <= 500 ? setHide(false) : setHide(true);
-  }, []);
-
+  const isDesktop = window.innerWidth >= 1000;
   return (
-    <div id="header">
-      <h1>
-        
-        <span className="aicon">A</span> anand <span>Chandel</span>
-      </h1>
+    <div id={isDesktop ? "headerD" : "headerM"}>
+      <Logo />
 
-      {hide && (
+      <MediaQuery minWidth={1001}>
         <ul>
-          <li>Projects</li>
-          <li>Contect</li>
-          <li>LogIn</li>
+        <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/project">Projects</Link>
+          </li>
+          <li>
+            <Link to="/contect">Contect</Link>
+          </li>
+          <li>
+            <Link to="/login">LogIn</Link>
+          </li>
         </ul>
-      )}
-      {!hide && <img src={barr}  alt="img"/>}
+      </MediaQuery>
+      <MediaQuery maxWidth={1000}>
+        <div>
+          {show && (
+            <ul>
+              <li>
+            <Link to="/">Home</Link>
+          </li>
+              <li>
+            <Link to="/project">Projects</Link>
+          </li>
+          <li>
+            <Link to="/contect">Contect</Link>
+          </li>
+          <li>
+            <Link to="/login">LogIn</Link>
+          </li>
+            </ul>
+          )}
+          <img
+            src={barr}
+            onClick={() => {
+              setShow(!show);
+            }}
+            alt="img"
+          />
+        </div>
+      </MediaQuery>
     </div>
   );
 };
