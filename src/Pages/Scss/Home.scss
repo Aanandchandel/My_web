@@ -2,14 +2,15 @@
   box-sizing: border-box;
 }
 
-#HomeD {
+#HomeD { 
+  // background-color: black;
   min-height: 90vh;
   display: flex;
 
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  margin-left: 5rem;
+  padding-left: 5rem;
   // position: relative;
   // bottom: 10rem;
   img {

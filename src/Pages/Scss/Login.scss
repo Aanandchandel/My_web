@@ -38,6 +38,7 @@
             input{
                 box-shadow: 10px 5px 10px rgba(255, 127, 80,0.25);
                 border: none;
+                border-radius: 5rem;
 
                 padding-left: 1rem;
                 width: 20vw;
@@ -76,10 +77,12 @@
                     display: flex;
                     // border: 1px solid red;
                 }
+                p{height: 2rem;}
                 input{
                     font-size: 2rem;
                     box-shadow: 10px 5px 10px rgba(255, 127, 80,0.25);
                     border: none;
+                    border-radius: 5rem;
     
                     padding-left: 1rem;
                     width: 70vw;

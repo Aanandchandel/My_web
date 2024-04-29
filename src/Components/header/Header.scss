@@ -1,4 +1,42 @@
+.modeiconD{ 
+  position: fixed;
+  right: 0.5vw;
+  top: 13vh;
+  height: 1.5rem; 
+  width: 2rem;
+}
+.modeicon{
+  span{
+    height: 100%;
+    width: 2px;
+  }
+    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  
+  
+}
+.modeiconDr{
+  span{
+    background-color: aliceblue;
+  }
+  border: 2px solid white;
+
+
+}
+.modeiconL{
+  border: 2px solid black;
+  span{
+    background-color: black;
+  }
+
+
+}
+
 #headerD {
+  color: black;
   z-index: 1;
   height: 4.5rem;
   background-color: white;
