@@ -10,12 +10,14 @@ const [message,setMessage]=useState("Welcome")
 const [mode,setMode]=useState(true)    
 const [lin,setLin]=useState(false)
 const [show, setShow] = useState(false);
+const url="http://localhost:3000"
 const val={ iamin,setIamin,
     setMessage,message,
     showMessage,setShowMessage,
     setMode,mode,
     lin,setLin,
     show, setShow
+    ,url
 }
     return(
         <CounterContext.Provider value={val} >

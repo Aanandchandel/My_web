@@ -12,7 +12,8 @@ import Login from './Pages/Login';
 import LOgin from './PrivateComponents/_Login';
 import Notification from './Components/Notification/Notification';
 import { CounterContext } from './Context/MyContext';
-
+import SignUp from './Pages/SignUp';
+import Contect from './Pages/Contect';
 
 function App() {
   const statusData=useContext(CounterContext)
@@ -34,17 +35,18 @@ function App() {
 
 <Routes>
 <Route path='/' element={<Home />}/>
+<Route path='/project' element={<Home />}/>
+<Route path='/contect' element={<Contect/>}/>
+
+
 {/* <Route path='/' element={<_Login  mode={mode} Component={ Home } /> }/> */}
 
-<Route path='/login' element={<LOgin  state={{setLogin}} mode={mode} tp="Login" gtt="Signup" pt="/Signup" tx="Don't have account" Component={Login} />}/>
+<Route path='/login' element={<LOgin   Component={Login} />}/>
 {/* <Route path='/login' element={<Login mode={mode} tp="Login" pt="/Signup" tx="Don't have account"/>}/> */}
 
-<Route path='/signup' element={<LOgin  state={{setLogin}} mode={mode} tp="Signup" gtt="Login" pt="/login" tx="Go to the Login" Component={Login} />}/>
+<Route path='/signup' element={<LOgin  Component={SignUp} />}/>
 {/* <Route path='/signup' element={<Login tp="Signup" pt="/login" tx="Go to the Login"/>}/> */}
 </Routes>
-
-<button onClick={()=>{setMode(!mode)}}>sdfsfasfasfasfasfasfafaffsadffff</button>
-
 <Footer/>
    
     </div>

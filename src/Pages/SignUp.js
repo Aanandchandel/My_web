@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import Cookies from "js-cookie";
 import fatchApi from "../FatchMathodes/fatch";
-const Login = () => {
+const SignUp = () => {
 
   const isDesktop = window.innerWidth >= 1001;
   const lData = {};
@@ -18,11 +18,10 @@ const Login = () => {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const url = "http://localhost:3000/users";
 
-  
-  
-  
-  
-  
+  const  onsubmit= async()=>{ 
+// const data=await fatchApi(url, header, method = "POST",{})//......................................
+// console.log(data)
+  }
   const inptvlue = (e) => {
     let name = e.target.name;
     lData[name] = e.target.value;
@@ -33,7 +32,7 @@ const Login = () => {
       <Robo img={robo} />
       <SideContact />
       <div id={isDesktop ? "FormDivD" : "FormDivM"}>
-        <h1>Login</h1>
+        <h1>SignUp</h1>
         <div>
           <input
             onChange={(e) => {
@@ -53,8 +52,8 @@ const Login = () => {
           <input type="submit" onClick={()=>{}  } placeholder="Submit" />
           <p>{warning}</p>
           <div>
-            <p>Don't have account</p>
-            <Link to={`/Signup`}>Signup</Link>
+            <p>Go to back </p>
+            <Link to={`/login`}>Login</Link>
           </div>
         </div>
       </div>
@@ -62,4 +61,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;

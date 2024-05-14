@@ -21,6 +21,7 @@ const fatchApi = async (url, header, method = "POST",data) => {
 
         return await response.json();
     } catch (error) {
+        
         console.error("Error fetching data:", error);
         throw error; // Re-throw the error to propagate it to the caller
     }

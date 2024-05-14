@@ -56,7 +56,7 @@ const {setLin,show}=statusData
     
 
     const isDesktop = window.innerWidth >= 1000;
-return <div id={isDesktop?"HomeD":"HomeM"}  className={mode?"light":"dark"}>
+return <div id={isDesktop?"HomeD":"HomeM"}  >
 
 <MediaQuery maxWidth={1000}>
 <img  src={myimg} alt="http://localhost:3000/" />  <div>
@@ -77,7 +77,9 @@ Thank you for your visit and for considering my work.
     Hi,It's <span>Aanand</span>
 </h1>
 <h2 id="iAmWebDeve"> I'm <span id="animated-text"></span></h2>
-<p className={mode?"light":"dark"}>
+<p 
+// className={mode?"light":"dark"}
+>
 Thank you for your visit and for considering my work.
 </p>
 <button>Resume</button>
